@@ -1,0 +1,112 @@
+@import "./normalize";
+@import "../src/variables";
+@import "../src/mixin";
+
+body {
+  margin: 0;
+  min-width: 320px;
+  -webkit-touch-callout: none;
+  overflow-x: hidden;
+
+  @include dark-mode() {
+    background-color: #222;
+  }
+}
+body, button, input, textarea, select {
+  text-size-adjust: none;
+  font-family: 'Noto Sans CJK KR', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1rem;
+  line-height: 1.62;
+  color: #222;
+
+  @include dark-mode() {
+    color: #d4d4d4;
+  }
+}
+main {
+  padding: 16px;
+  @include responsive(desktop) {
+    padding: 24px;
+  }
+}
+
+@import "../src/body";
+
+.app-header {
+  position: relative;
+  padding: 0 0 16px;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -16px;
+    right: -16px;
+    bottom: 0;
+    height: 1px;
+    background-color: #ddd;
+  }
+  h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 1;
+    user-select: none;
+  }
+  nav {
+    margin: 10px 0 0;
+    font-size: 0;
+    button {
+      display: inline-block;
+      border: none;
+      background-color: #eee;
+      font-size: 12px;
+      padding: 4px 12px;
+      margin: 0;
+      cursor: pointer;
+      outline: none;
+      user-select: none;
+      &:active {
+        background-color: #ccc;
+      }
+      &:nth-child(n+2) {
+        margin-left: 4px;
+      }
+      &.on {
+        background-color: #ccc;
+      }
+    }
+  }
+
+  @include responsive(desktop) {
+    padding-bottom: 24px;
+    &:after {
+      left: -24px;
+      right: -24px;
+    }
+  }
+  @include dark-mode() {
+    &:after {
+      background-color: #666;
+    }
+    h1 {
+      color: #fff;
+    }
+    nav {
+      button {
+        background-color: #414141;
+        &:active {
+          background: #222;
+        }
+        &.on {
+          background-color: #282828;
+        }
+      }
+    }
+  }
+}
+.container {
+  margin: 24px 0 0;
+  @include responsive(desktop) {
+    //margin: 0;
+  }
+}
