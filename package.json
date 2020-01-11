@@ -1,7 +1,7 @@
 {
   "name": "redgoose-content-body",
   "version": "1.0.0",
-  "main": "src/body.scss",
+  "main": "dist/body.scss",
   "repository": "https://github.com/redgoose-dev/redgoose-content-body.git",
   "author": "redgoose <scripter@me.com>",
   "license": "MIT",
