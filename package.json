@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "watch": "parcel dev/index.html -d ./dev/dist/ -p 4000",
-    "build": "rm -rf ./dist && parcel build ./src/body.scss --no-source-maps"
+    "build": "rm -rf ./dist && parcel build ./src/body.scss --no-source-maps && cp ./dist/body.css ./dist/body.scss"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.3",
