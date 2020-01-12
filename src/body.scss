@@ -214,7 +214,6 @@ $self: '.redgoose-body';
   }
 
   @include responsive(desktop) {
-    font-size: .9375rem;
     img {
       max-width: 90vw;
     }
