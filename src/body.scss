@@ -222,6 +222,11 @@ $self: '.redgoose-body';
         zoom: .75;
       }
     }
+    &--popup {
+      img {
+        max-width: 100%;
+      }
+    }
   }
   @include dark-mode() {
     color: $color-dark-base;
