@@ -12,8 +12,8 @@ $self: '.redgoose-body';
     line-height: 1.25;
     font-weight: 600;
   }
-  h1, h2 { margin: 2.5rem 0 1.5rem; }
-  h3, h4 { margin: 2rem 0 1.25rem; }
+  h1, h2 { margin: 2.5rem 0 1.5rem; font-weight: 800; }
+  h3, h4 { margin: 2rem 0 1.25rem; font-weight: 700; }
   h5, h6 { margin: 1.5rem 0 1rem; }
   h1 { font-size: 2em; letter-spacing: -1px; }
   h2 { font-size: 1.75em; letter-spacing: -.75px; }
@@ -51,7 +51,7 @@ $self: '.redgoose-body';
     }
   }
   blockquote {
-    $border-width: 4px;
+    $border-width: 5px;
     position: relative;
     margin: $vertical-margin 0;
     padding: 1rem 1rem 1rem calc(1rem + #{$border-width});
@@ -231,7 +231,7 @@ $self: '.redgoose-body';
   @include dark-mode() {
     color: $color-dark-base;
     h1, h2, h3, h4, h5, h6 {
-      //color: #fff;
+      color: #fff;
     }
     a {
       color: $color-dark-key;
