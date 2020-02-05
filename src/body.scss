@@ -215,16 +215,18 @@ $self: '.redgoose-body';
 
   @include responsive(desktop) {
     img {
-      max-width: 90vw;
-    }
-    @include retina() {
-      img {
-        zoom: .75;
-      }
+      max-width: 95vw;
     }
     &--popup {
       img {
         max-width: 100%;
+      }
+    }
+  }
+  @include responsive(max) {
+    @include retina() {
+      img {
+        zoom: .75;
       }
     }
   }
