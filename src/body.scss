@@ -212,6 +212,53 @@ $self: '.redgoose-body';
       margin-right: auto;
     }
   }
+  &--dark {
+    @include dark-mode() {
+      color: $color-dark-base;
+      h1, h2, h3, h4, h5, h6 {
+        color: #fff;
+      }
+      a {
+        color: $color-dark-key;
+      }
+      code {
+        color: $color-dark-code;
+      }
+      pre {
+        background: $color-dark-content-bg;
+        > code {
+          color: mix($color-dark-base, #000, 75%);
+        }
+      }
+      blockquote {
+        background: $color-dark-content-bg;
+        color: mix($color-dark-base, #000, 75%);
+        &:before {
+          border-color: rgba(255,255,255,.04);
+        }
+        &:after {
+          background: $color-dark-primary;
+        }
+      }
+      hr {
+        &:after {
+          color: $color-dark-base;
+        }
+      }
+      table {
+        th,
+        td {
+          border-color: $color-dark-content-line;
+        }
+        thead {
+          th,
+          td {
+            background-color: $color-dark-content-bg;
+          }
+        }
+      }
+    }
+  }
 
   @include responsive(desktop) {
     img {
@@ -227,51 +274,6 @@ $self: '.redgoose-body';
     @include retina() {
       img {
         zoom: .75;
-      }
-    }
-  }
-  @include dark-mode() {
-    color: $color-dark-base;
-    h1, h2, h3, h4, h5, h6 {
-      color: #fff;
-    }
-    a {
-      color: $color-dark-key;
-    }
-    code {
-      color: $color-dark-code;
-    }
-    pre {
-      background: $color-dark-content-bg;
-      > code {
-        color: mix($color-dark-base, #000, 75%);
-      }
-    }
-    blockquote {
-      background: $color-dark-content-bg;
-      color: mix($color-dark-base, #000, 75%);
-      &:before {
-        border-color: rgba(255,255,255,.04);
-      }
-      &:after {
-        background: $color-dark-primary;
-      }
-    }
-    hr {
-      &:after {
-        color: $color-dark-base;
-      }
-    }
-    table {
-      th,
-      td {
-        border-color: $color-dark-content-line;
-      }
-      thead {
-        th,
-        td {
-          background-color: $color-dark-content-bg;
-        }
       }
     }
   }
