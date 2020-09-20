@@ -4,13 +4,24 @@
 $self: '.redgoose-body';
 
 .redgoose-body {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: $color-base;
+  --color-text: #222;
+  --color-text-key: #b31f37;
+  --color-text-title: #111;
+  --color-text-code: #4f64ff;
+  --color-content-bg: #f3f4f5;
+  --color-content-line: #ddd;
+  --size-text: 1rem;
+  --size-text-length: 1.75;
+  --size-margin-vertical: 1.5rem;
+
+  font-size: var(--size-text);
+  line-height: var(--size-text-length);
+  color: var(--color-text);
 
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.25;
     font-weight: 600;
+    color: var(--color-text-title);
   }
   h1, h2 { margin: 2.5rem 0 1.5rem; font-weight: 800; }
   h3, h4 { margin: 2rem 0 1.25rem; font-weight: 700; }
@@ -22,27 +33,22 @@ $self: '.redgoose-body';
   h5 { font-size: 1em; }
   h6 { font-size: .9375em; }
   p {
-    margin: $vertical-margin 0;
+    margin: var(--size-margin-vertical) 0;
   }
   ul, ol {
-    margin: $vertical-margin 0;
+    margin: var(--size-margin-vertical) 0;
     padding-left: 1.125rem;
     li {
       margin: .25rem 0;
     }
   }
   a {
-    color: $color-key;
+    color: var(--color-text-key);
   }
   img {
     display: block;
-    position: relative;
-    left: 50%;
-    margin: #{$vertical-margin * 2.5} 0 #{$vertical-margin * .75};
-    max-width: 100vw;
-    max-height: 1240px;
-    transform: translateX(-50%);
-    transform-origin: 50% 50%;
+    margin: calc(var(--size-margin-vertical) * 2.5) auto var(--size-margin-vertical);
+    max-width: 100%;
   }
   h1, h2, h3 {
     & + * > img:first-child,
@@ -51,13 +57,12 @@ $self: '.redgoose-body';
     }
   }
   blockquote {
-    $border-width: 5px;
+    --border-width: 5px;
     position: relative;
-    margin: $vertical-margin 0;
-    padding: 1rem 1rem 1rem calc(1rem + #{$border-width});
-    background-color: $color-content-bg;
+    margin: var(--size-margin-vertical) 0;
+    padding: 1rem 1rem 1rem calc(1rem + var(--border-width));
+    background-color: var(--color-content-bg);
     box-sizing: border-box;
-    color: mix($color-base, #fff, 75%);
     &:before {
       content: '';
       display: block;
@@ -75,8 +80,8 @@ $self: '.redgoose-body';
       left: 0;
       top: 0;
       bottom: 0;
-      width: $border-width;
-      background: $color-primary;
+      width: var(--border-width);
+      background: var(--color-text-key);
     }
     * {
       &:first-child {
@@ -88,39 +93,41 @@ $self: '.redgoose-body';
     }
   }
   hr {
-    $size: 1.25em;
+    --size: 1.25em;
     display: block;
-    margin: #{$vertical-margin * 2.5} 0;
-    padding: 0 0 #{$size * .5};
+    margin: calc(var(--size-margin-vertical) * 2.5) 0;
+    padding: 0 0 calc(var(--size) * .5);
     border: none;
     &:after {
       content: '...';
       position: relative;
       display: block;
-      top: -#{$size * .5};
+      top: calc(-1 * calc(var(--size) * .5));
       text-align: center;
       font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-      font-size: $size;
-      text-indent: $size * .5;
+      font-size: var(--size);
+      text-indent: calc(var(--size) * .5);
       letter-spacing: 8px;
       font-weight: 800;
       line-height: 1;
-      color: $color-base;
+      color: var(--color-text);
     }
   }
   table {
-    margin: $vertical-margin 0;
+    margin: var(--size-margin-vertical) 0;
     border-collapse: collapse;
     font-size: .875em;
+    box-sizing: border-box;
     th,
     td {
       padding: .5rem 1rem;
-      border: 1px solid $color-content-line;
+      border: 1px solid var(--color-content-line);
+      box-sizing: border-box;
     }
     thead {
       th,
       td {
-        background-color: $color-content-bg;
+        background-color: var(--color-content-bg);
       }
     }
     tbody {
@@ -136,12 +143,12 @@ $self: '.redgoose-body';
   code {
     word-break: break-word;
     font-size: 92.5%;
-    color: $color-code;
+    color: var(--color-text-code);
   }
   pre {
-    margin: $vertical-margin 0;
+    margin: var(--size-margin-vertical) 0;
     padding: 1rem;
-    background: $color-content-bg;
+    background: var(--color-content-bg);
     font-size: .9375em;
     line-height: 1.5;
     overflow: auto;
@@ -153,7 +160,7 @@ $self: '.redgoose-body';
       background: none;
       white-space: pre;
       border-radius: 0;
-      color: mix($color-base, #fff, 75%);
+      color: var(--color-text-base);
       font-size: 1em;
     }
   }
@@ -162,12 +169,12 @@ $self: '.redgoose-body';
   }
   iframe {
     display: block;
-    margin: $vertical-margin auto;
+    margin: var(--size-margin-vertical) auto;
     max-width: 100%;
   }
   .iframe {
     position: relative;
-    margin: $vertical-margin 0;
+    margin: var(--size-margin-vertical) 0;
     padding-bottom: 56.25%; /*16:9*/
     height: 0;
     overflow: hidden;
@@ -183,8 +190,8 @@ $self: '.redgoose-body';
   embed {
     display: block;
     max-width: 100%;
-    margin: $vertical-margin auto;
-    background: #eee;
+    margin: var(--size-margin-vertical) auto;
+    background: var(--color-content-bg);
   }
 
   > * {
@@ -202,74 +209,17 @@ $self: '.redgoose-body';
     }
   }
 
-  &--popup {
-    img {
-      position: static;
-      max-width: 100%;
-      min-width: auto;
-      transform: none;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
   &--dark {
     @include dark-mode() {
-      color: $color-dark-base;
-      h1, h2, h3, h4, h5, h6 {
-        color: #fff;
-      }
-      a {
-        color: $color-dark-key;
-      }
-      code {
-        color: $color-dark-code;
-      }
-      pre {
-        background: $color-dark-content-bg;
-        > code {
-          color: mix($color-dark-base, #000, 75%);
-        }
-      }
-      blockquote {
-        background: $color-dark-content-bg;
-        color: mix($color-dark-base, #000, 75%);
-        &:before {
-          border-color: rgba(255,255,255,.04);
-        }
-        &:after {
-          background: $color-dark-primary;
-        }
-      }
-      hr {
-        &:after {
-          color: $color-dark-base;
-        }
-      }
-      table {
-        th,
-        td {
-          border-color: $color-dark-content-line;
-        }
-        thead {
-          th,
-          td {
-            background-color: $color-dark-content-bg;
-          }
-        }
-      }
+      --color-text: #d4d4d4;
+      --color-text-key: #1ccd5c;
+      --color-text-title: #fff;
+      --color-text-code: #ffcd3a;
+      --color-content-bg: #1a1a1a;
+      --color-content-line: #333;
     }
   }
 
-  @include responsive(desktop) {
-    img {
-      max-width: 95vw;
-    }
-    &--popup {
-      img {
-        max-width: 100%;
-      }
-    }
-  }
   @include responsive(max) {
     @include retina() {
       img {
