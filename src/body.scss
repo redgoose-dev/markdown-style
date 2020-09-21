@@ -56,42 +56,6 @@ $self: '.redgoose-body';
       margin-top: 1rem;
     }
   }
-  blockquote {
-    --border-width: 5px;
-    position: relative;
-    margin: var(--size-margin-vertical) 0;
-    padding: 1rem 1rem 1rem calc(1rem + var(--border-width));
-    background-color: var(--color-content-bg);
-    box-sizing: border-box;
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      border: 1px solid rgba(0,0,0,.025);
-      pointer-events: none;
-    }
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: var(--border-width);
-      background: var(--color-text-key);
-    }
-    * {
-      &:first-child {
-        margin-top: 0;
-      }
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
   hr {
     --size: 1.25em;
     display: block;
@@ -193,6 +157,49 @@ $self: '.redgoose-body';
     margin: var(--size-margin-vertical) auto;
     background: var(--color-content-bg);
   }
+  blockquote {
+    --border-width: 6px;
+    position: relative;
+    margin: var(--size-margin-vertical) 0;
+    padding: 1rem 1rem 1rem calc(1rem + var(--border-width));
+    box-shadow: inset 0 0 0 1px var(--color-content-line);
+    box-sizing: border-box;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border: 1px solid rgba(0,0,0,.025);
+      pointer-events: none;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: var(--border-width);
+      background: var(--color-text-key);
+    }
+    p,
+    pre,
+    table,
+    ul,
+    ol {
+      margin: calc(var(--size-margin-vertical) * .5) 0;
+    }
+    * {
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 
   > * {
     &:first-child {
@@ -216,7 +223,7 @@ $self: '.redgoose-body';
       --color-text-title: #fff;
       --color-text-code: #ffcd3a;
       --color-content-bg: #1a1a1a;
-      --color-content-line: #333;
+      --color-content-line: #383838;
     }
   }
 
