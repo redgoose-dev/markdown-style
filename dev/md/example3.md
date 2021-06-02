@@ -1,3 +1,9 @@
+<picture>
+<source srcset="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-dark.png" media="(prefers-color-scheme: dark)"/>
+<source srcset="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-light.png" media="(prefers-color-scheme: light)"/>
+<img src="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-light.png" alt=""/>
+</picture>
+
 - date: 2019-02-24
 - position: design, front and develop
 - tool: phpstorm, sketchapp, balsamiq mockup

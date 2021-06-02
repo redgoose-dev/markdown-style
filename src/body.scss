@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./mixin";
+@use "./variables";
+@use "./mixin" as *;
 
 $self: '.redgoose-body';
 
@@ -45,6 +45,7 @@ $self: '.redgoose-body';
   a {
     color: var(--color-text-key);
   }
+  picture,
   img {
     display: block;
     margin: calc(var(--size-margin-vertical) * 2.5) auto var(--size-margin-vertical);
@@ -52,9 +53,14 @@ $self: '.redgoose-body';
   }
   h1, h2, h3 {
     & + * > img:first-child,
-    & + img {
+    & + * > picture:first-child,
+    & + img,
+    & + picture {
       margin-top: 1rem;
     }
+  }
+  picture > img {
+    margin: 0 auto;
   }
   hr {
     --size: 1.25em;

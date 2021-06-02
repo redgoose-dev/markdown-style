@@ -1,19 +1,19 @@
 {
   "name": "redgoose-content-body",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/body.scss",
   "repository": "https://github.com/redgoose-dev/redgoose-content-body.git",
   "author": "redgoose <scripter@me.com>",
   "license": "MIT",
   "scripts": {
-    "watch": "parcel dev/index.html -d ./dev/dist/ -p 4000",
+    "dev": "parcel dev/index.html -d ./dev/dist/ -p 4000",
     "build": "rm -rf ./dist && parcel build ./src/body.scss --no-source-maps && cp ./dist/body.css ./dist/body.scss"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.0",
     "cssnano": "^4.1.10",
     "marked": "^1.1.1",
-    "parcel": "^1.12.4",
+    "parcel": "1.12.3",
     "postcss-modules": "^3.2.2",
     "postcss-preset-env": "^6.7.0",
     "sass": "^1.26.11"
