@@ -1,21 +1,23 @@
 {
   "name": "redgoose-content-body",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "main": "dist/body.scss",
   "repository": "https://github.com/redgoose-dev/redgoose-content-body.git",
   "author": "redgoose <scripter@me.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel dev/index.html -d ./dev/dist/ -p 4000",
-    "build": "rm -rf ./dist && parcel build ./src/body.scss --no-source-maps && cp ./dist/body.css ./dist/body.scss"
+    "dev": "vite",
+    "build": "rm -rf dist && yarn run build:full && yarn run build:min",
+    "build:min": "sass src/body.scss:dist/body.css --no-source-map --style=compressed",
+    "build:full": "sass src/body.scss:dist/body.scss --no-source-map --style=expanded"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "devDependencies": {
-    "autoprefixer": "^10.0.0",
-    "cssnano": "^4.1.10",
-    "marked": "^2.0.7",
-    "parcel": "1.12.3",
-    "postcss-modules": "^3.2.2",
-    "postcss-preset-env": "^6.7.0",
-    "sass": "^1.26.11"
+    "marked": "^4.0.12",
+    "sass": "^1.49.11",
+    "vite": "^2.9.1"
   }
 }
