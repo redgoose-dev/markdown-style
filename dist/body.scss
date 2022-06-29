@@ -183,18 +183,11 @@ html[data-theme=dark] .redgoose-body pre::-webkit-scrollbar-thumb:hover {
 .redgoose-body .iframe {
   position: relative;
   margin: var(--size-margin-vertical) 0;
-  padding-bottom: 56.25%;
-  /*16:9*/
-  height: 0;
-  overflow: hidden;
+  aspect-ratio: var(--size-aspect-ratio, 16/9);
 }
-.redgoose-body .iframe iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+.redgoose-body .iframe > iframe {
   width: 100%;
   height: 100%;
-  margin: 0;
 }
 .redgoose-body embed {
   display: block;
