@@ -23,10 +23,10 @@ scss 파일 안에서는 다음과 같이 소스를 붙일 수 있습니다.
 
 ```
 // src/body.scss
-@import '~redgoose-content-body';
+@import '@redgoose/markdown-style';
 
 // dist/body.scss
-@import '~redgoose-content-body/dist/body.scss';
+@import '@redgoose/markdown-style/dist/body.scss';
 ```
 
 ### css
@@ -34,7 +34,7 @@ scss 파일 안에서는 다음과 같이 소스를 붙일 수 있습니다.
 javascript 프로젝트 내부에서 다음과 같이 css 파일을 불러옵니다.
 
 ```
-import '~redgoose-content-body/dist/body.css';
+import '@redgoose/markdown-style/dist/body.css';
 ```
 
 

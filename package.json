@@ -1,13 +1,14 @@
 {
   "name": "@redgoose/markdown-style",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "main": "dist/body.scss",
-  "repository": "https://github.com/redgoose-dev/redgoose-content-body.git",
+  "repository": "https://github.com/redgoose-dev/markdown-style.git",
   "author": "redgoose <scripter@me.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "rm -rf dist && yarn run build:full && yarn run build:min",
+    "build": "rm -rf dist && bun run build:full && bun run build:min",
     "build:min": "sass src/body.scss:dist/body.css --no-source-map --style=compressed",
     "build:full": "sass src/body.scss:dist/body.scss --no-source-map --style=expanded"
   },
@@ -16,8 +17,8 @@
     "last 2 versions"
   ],
   "devDependencies": {
-    "marked": "^4.0.17",
+    "marked": "^4.0.18",
     "sass": "^1.53.0",
-    "vite": "^2.9.13"
+    "vite": "^3.0.0"
   }
 }
