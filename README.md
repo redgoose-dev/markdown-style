@@ -8,10 +8,10 @@ redgoose 서비스에서 공통으로 사용하기 위한 글 본문 스타일�
 
 ```
 // npm
-npm install https://github.com/redgoose-dev/redgoose-content-body.git
+npm install https://github.com/redgoose-dev/markdown-style.git
 
 // yarn
-yarn add https://github.com/redgoose-dev/redgoose-content-body.git
+yarn add https://github.com/redgoose-dev/markdown-style.git
 ```
 
 
