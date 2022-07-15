@@ -1,6 +1,6 @@
 {
-  "name": "redgoose-content-body",
-  "version": "1.1.1",
+  "name": "@redgoose/markdown-style",
+  "version": "1.1.2",
   "main": "dist/body.scss",
   "repository": "https://github.com/redgoose-dev/redgoose-content-body.git",
   "author": "redgoose <scripter@me.com>",
