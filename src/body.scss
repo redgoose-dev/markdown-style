@@ -70,7 +70,7 @@
       content: '...';
       position: relative;
       display: block;
-      top: calc(var(-1) * calc(var(--size) * .5));
+      top: calc((calc(var(--size) * .45)) * -1);
       text-align: center;
       font-family: Georgia, Cambria, "Times New Roman", Times, serif;
       font-size: var(--size);

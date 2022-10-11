@@ -10,6 +10,8 @@ look like:
   * that one
   * the other one
 
+----
+
 Note that --- not considering the asterisk --- the actual text
 content starts at 4-columns in.
 
@@ -143,7 +145,7 @@ Here's a "line block" (note how whitespace is honored):
 
 and images can be specified like so:
 
-![example image](https://goose.redgoose.me/data/upload/original/201912/horizon-001.jpg "An exemplary image")
+![example image](https://images.unsplash.com/photo-1665442580803-b35184c7de0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=60 "An exemplary image")
 
 Inline math equation: `$\omega = d\phi / dt$`.  
 Display math should get its own line like so:
