@@ -54,4 +54,6 @@ yarn run build
 
 ## markdown guide
 
-TODO: 링크추가
+마크다운 문서 작성에 필요한 가이드 링크
+
+https://github.com/redgoose-dev/markdown-style/tree/main/guide
