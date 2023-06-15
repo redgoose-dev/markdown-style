@@ -1,6 +1,6 @@
 {
   "name": "@redgoose/markdown-style",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "main": "dist/body.scss",
   "repository": "https://github.com/redgoose-dev/markdown-style.git",
   "author": "redgoose <scripter@me.com>",
@@ -17,8 +17,8 @@
     "last 2 versions"
   ],
   "devDependencies": {
-    "marked": "^4.1.1",
-    "sass": "^1.55.0",
-    "vite": "^3.1.8"
+    "marked": "^5.1.0",
+    "sass": "^1.63.4",
+    "vite": "^4.3.9"
   }
 }
